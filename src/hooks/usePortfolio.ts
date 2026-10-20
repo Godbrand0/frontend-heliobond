@@ -189,8 +189,7 @@ export function usePortfolio(customAddress?: string): UsePortfolioResult {
   const claimableYield = current?.claimableYield ?? 0
   const vaultLiquidity = current?.vaultLiquidity ?? null
   const error = current?.error ?? null
-  const activityFeed =
-    activityState && activityState.address === address ? activityState.feed : []
+  const activityFeed = activityState && activityState.address === address ? activityState.feed : []
 
   // Derive YouSummary structure for UI compatibility
   const demoYou = selectYou()
